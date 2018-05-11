@@ -279,6 +279,21 @@
                             </artifactItem>
 
                             <artifactItem>
+                                <groupId>org.apache.commons</groupId>
+                                <artifactId>commons-dbcp2</artifactId>
+                                <version>2.0</version>
+                                <type>jar</type>
+                                <overWrite>false</overWrite>
+                            </artifactItem>
+                            <artifactItem>
+                                <groupId>javax.servlet</groupId>
+                                <artifactId>jstl</artifactId>
+                                <version>1.2</version>
+                                <type>jar</type>
+                                <overWrite>false</overWrite>
+                            </artifactItem>
+
+                            <artifactItem>
                                 <groupId>javax.servlet</groupId>
                                 <artifactId>servlet-api</artifactId>
                                 <version>2.4</version>
@@ -345,6 +360,26 @@
                                 <type>jar</type>
                                 <overWrite>false</overWrite>
                             </artifactItem>
+
+
+
+                            <artifactItem>
+                                <groupId>org.springframework</groupId>
+                                <artifactId>spring-dao</artifactId>
+                                <version>2.0.8</version>
+                                <type>jar</type>
+                                <overWrite>false</overWrite>
+                            </artifactItem>
+
+                            <artifactItem>
+                                <groupId>org.springframework.data</groupId>
+                                <artifactId>spring-data-mongodb</artifactId>
+                                <version>2.0.6.RELEASE</version>
+                                <type>jar</type>
+                                <overWrite>false</overWrite>
+                            </artifactItem>
+
+
 
                         </artifactItems>
                         <outputDirectory>${project.build.directory}/src/main/webapp/WEB-INF/lib</outputDirectory>
