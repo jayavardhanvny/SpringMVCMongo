@@ -30,13 +30,5 @@
         <property name="password" value="password"></property>
         <property name="initialSize" value="2"></property>
     </bean>
-    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
-        <property name="dataSource" ref="dataSource"/>
-    </bean>
-    <bean id="userImpl" class="org.letuslearn.dao.UserImpl">
-        <property name="jdbcTemplate" ref="jdbcTemplate"/>
-    </bean>
-    <bean id="employeeDaoImpl" class="org.letuslearn.dao.EmployeeDaoImpl">
-        <property name="jdbcTemplate" ref="jdbcTemplate"/>
-    </bean>
+
 </beans>
