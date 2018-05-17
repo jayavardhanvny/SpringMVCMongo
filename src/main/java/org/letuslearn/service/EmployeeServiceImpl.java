@@ -150,10 +150,10 @@ public class EmployeeServiceImpl implements EmployeeService {
         try {
 
             // Find an entry where empid matches the id
-            DBObject query = new BasicDBObject();
-            query.put("empId", empid);
+            //DBObject query = new BasicDBObject();
+            //query.put("empId", empid);
             // Run the query and delete the entry
-            mongoTemplate.getDb().getCollection("employee").deleteOne(Filters.eq(query));
+            mongoTemplate.getDb().getCollection("employee").deleteOne(Filters.eq("empId", empid));
             //mongoTemplate.getDb().getCollection("employee").findAndRemove(query);
 
             return true;

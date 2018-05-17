@@ -56,7 +56,7 @@ public class EmployeeControllerMongo {
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.GET)
-    public ModelAndView editEmployee(@ModelAttribute("command")  EmployeeBean employeeBean, BindingResult result) {
+    public ModelAndView deleteEmployee(@ModelAttribute("command")  EmployeeBean employeeBean, BindingResult result) {
         employeeService.deleteEmployee(employeeBean.getId());
         Map<String, Object> model = new HashMap<String, Object>();
         model.put("employee", null);
@@ -65,7 +65,7 @@ public class EmployeeControllerMongo {
     }
 
     @RequestMapping(value = "/edit", method = RequestMethod.GET)
-    public ModelAndView deleteEmployee(@ModelAttribute("command")  EmployeeBean employeeBean, BindingResult result) {
+    public ModelAndView editEmployee(@ModelAttribute("command")  EmployeeBean employeeBean, BindingResult result) {
         Map<String, Object> model = new HashMap<String, Object>();
         model.put("employee", prepareEmployeeBean(employeeService.getEmployee(employeeBean.getId())));
         model.put("employees",  prepareListofBean(employeeService.listEmployeess()));
