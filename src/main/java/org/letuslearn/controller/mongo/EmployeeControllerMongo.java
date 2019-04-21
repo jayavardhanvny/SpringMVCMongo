@@ -32,7 +32,6 @@ public class EmployeeControllerMongo {
         System.out.println("in Save method ");
         Employee employee = prepareModel(employeeBean);
         employeeService.addEmployee(employee);
-        //System.out.println("in Save method "+employee.getEmpName());
         return new ModelAndView("redirect:/add.html");
     }
 
